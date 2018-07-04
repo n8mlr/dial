@@ -1,5 +1,6 @@
 @arctic: #fafcff;
 @teal1: #109494;
+
 @toggle_speed: 0.15s;
 
 #dialWrap {
@@ -17,6 +18,11 @@
     right: 0;
     left: 0;
     bottom: 0;
+}
+
+.disc {
+    background-color: @arctic;
+    filter: drop-shadow(0 5px 14px rgba(0, 0, 0, 0.2));
 }
 
 .discToggler {
@@ -39,17 +45,16 @@
 }
 
 .discToggler.open {
+    .disc;
     transform: scale(1);
-    background-color: @arctic;
-    filter: drop-shadow(0 5px 14px rgba(0, 0, 0, 0.2));
     transition: background @toggle_speed ease,
     transform @toggle_speed;
 }
 
 .discToggler [data-icon] {
+    .absCenter;
     font-size: 64px;
     padding: 56px;
-    .absCenter;
     color: @arctic;
     transition: color @toggle_speed ease-out,
     transform @toggle_speed ease-out;
