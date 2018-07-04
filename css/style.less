@@ -1,26 +1,35 @@
+@arctic: #fafcff;
+@teal1: #109494;
+@toggle_speed: 0.15s;
+
 #dialWrap {
     position: fixed;
     left: 300px;
     right: 0;
-    top:0;
+    top: 0;
     bottom: 0;
 }
 
-.discToggler {
+.absCenter() {
     position: absolute;
     margin: auto;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: #109494;
+}
+
+.discToggler {
+    .absCenter;
+    background-color: @teal1;
     width: 180px;
     height: 180px;
     transform: scale(0.4);
     border-radius: 100px;
     filter: drop-shadow(0 8px 0 #0B6161);
     cursor: pointer;
-    transition: transform 0.2s;
+    transition: background @toggle_speed ease,
+    transform @toggle_speed;
 }
 
 .discToggler svg {
@@ -31,12 +40,22 @@
 
 .discToggler.open {
     transform: scale(1);
-    background-color: #fafcff;
-    filter: drop-shadow(0 5px 14px rgba(0,0,0,0.2));
-    transition: transform 0.2s;
+    background-color: @arctic;
+    filter: drop-shadow(0 5px 14px rgba(0, 0, 0, 0.2));
+    transition: background @toggle_speed ease,
+    transform @toggle_speed;
 }
 
-.discToggler.open svg {
-    fill: #b7bec5;
-    transform: rotate(45deg) scale(0.5);
+.discToggler [data-icon] {
+    font-size: 64px;
+    padding: 56px;
+    .absCenter;
+    color: @arctic;
+    transition: color @toggle_speed ease-out,
+    transform @toggle_speed ease-out;
+}
+
+.discToggler.open [data-icon] {
+    transform: rotate(45deg);
+    color: #b7bec5;
 }

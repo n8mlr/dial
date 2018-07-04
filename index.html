@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Dial</title>
-    <!-- <link rel="stylesheet" href="https://use.typekit.net/lwg4zkm.css"> -->
     <link rel="stylesheet" href="css/demo.css">
-    <link rel="stylesheet/less" type="text/css" href="css/style.less" />
+    <link rel="stylesheet/less" type="text/css" media="screen" href="css/style.less" />
 </head>
 
 <body>
@@ -20,25 +19,30 @@
         <div id="dialWrap">
             <div id="dialMenu" class="dialMenu">
                 <div class="discToggler">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320">
-                        <g id="plus">
-                            <path d="M298.67,138.67H181.33V21.33a21.33,21.33,0,0,0-42.66,0V138.67H21.33a21.33,21.33,0,0,0,0,42.66H138.67V298.67a21.33,21.33,0,0,0,42.66,0V181.33H298.67a21.33,21.33,0,0,0,0-42.66Z" />
-                        </g>
-                    </svg>
+                    <div data-icon="icon-plus"></div>
                 </div>
             </div>
+            <div id="dial1" class="dial"></div>
         </div>
     </div>
     <div class="orthobg"></div>
-    <script src="js/less.min.js" ></script>
-    <script src="js/point.js"></script>
+    <script src="js/less.min.js"></script>
     <script src="js/point.js"></script>
     <script src="js/rectangle.js"></script>
     <script src="js/dial.js"></script>
     <script src="js/disc.js"></script>
     <script src="js/dialMenu.js"></script>
     <script>
-        let dm = new DialMenu('#dialMenu');
+    'use strict';
+
+    let dm = new DialMenu('#dialMenu');
+    let settings = {
+        "dials": [
+            { "name": "add" },
+            { "name": "measure" },
+            { "name": "talk" },
+        ],
+    };
     </script>
 </body>
 

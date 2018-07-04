@@ -9,6 +9,18 @@ body {
     margin: 0;
 }
 
+@font-face {
+    font-family: "unearth";
+    src: url("fonts/unearth.ttf");
+    src: url("fonts/unearth.woff") format("woff"),
+    url("fonts/unearth.svg#filename") format("svg");
+}
+
+[data-icon]:before {
+  font-family: 'unearth'; /* BYO icon font, mapped smartly */
+  content: attr(data-icon);
+}
+
 p {
     margin: 0 auto;
 }
@@ -103,7 +115,7 @@ h2 {
 }
 
 .orthobg {
-    background: url(//demo.unearthlabs.com/codepen/d_0004_kitsap.jpg);
+    background: url(../img/d_0004_kitsap.jpg);
     background-size: cover;
     position: absolute;
     left: 0;
@@ -131,8 +143,8 @@ label {
     margin-bottom: 12px;
 }
 
-.formLineWrap::after { 
-  content: "";
-  display: block; 
-  clear: both;
+.formLineWrap::after {
+    content: "";
+    display: block;
+    clear: both;
 }
