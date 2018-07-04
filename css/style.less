@@ -1,0 +1,42 @@
+#dialWrap {
+    position: fixed;
+    left: 300px;
+    right: 0;
+    top:0;
+    bottom: 0;
+}
+
+.discToggler {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #109494;
+    width: 180px;
+    height: 180px;
+    transform: scale(0.4);
+    border-radius: 100px;
+    filter: drop-shadow(0 8px 0 #0B6161);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.discToggler svg {
+    transform: scale(0.4);
+    fill: #fafcff;
+    transition: transform 0.1s;
+}
+
+.discToggler.open {
+    transform: scale(1);
+    background-color: #fafcff;
+    filter: drop-shadow(0 5px 14px rgba(0,0,0,0.2));
+    transition: transform 0.2s;
+}
+
+.discToggler.open svg {
+    fill: #b7bec5;
+    transform: rotate(45deg) scale(0.5);
+}
