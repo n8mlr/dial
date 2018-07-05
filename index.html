@@ -22,28 +22,17 @@
                     <div data-icon="icon-plus"></div>
                 </div>
             </div>
-            <div id="dial1" class="disc dial"></div>
+            <canvas class="dial" id="dial1" width="802" height="802"></canvas>
         </div>
     </div>
     <div class="orthobg"></div>
     <script src="js/less.min.js"></script>
+    <script src="js/colors.js"></script>
     <script src="js/point.js"></script>
     <script src="js/rectangle.js"></script>
     <script src="js/dial.js"></script>
-    <script src="js/disc.js"></script>
     <script src="js/dialMenu.js"></script>
-    <script>
-    'use strict';
-
-    let dm = new DialMenu('#dialMenu');
-    let settings = {
-        "dials": [
-            { "name": "add" },
-            { "name": "measure" },
-            { "name": "talk" },
-        ],
-    };
-    </script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

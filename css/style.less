@@ -25,14 +25,22 @@
     filter: drop-shadow(0 5px 14px rgba(0, 0, 0, 0.2));
 }
 
+// TODO: figure out how to conditionally scale for HD displays
+#dial1 {
+    .absCenter;
+    z-index: 2;
+    transform: scale(0.5);
+}
+
 .discToggler {
     .absCenter;
+    filter: drop-shadow(0 8px 0 #0B6161);
+    z-index: 3;
     background-color: @teal1;
     width: 180px;
     height: 180px;
     transform: scale(0.4);
     border-radius: 100px;
-    filter: drop-shadow(0 8px 0 #0B6161);
     cursor: pointer;
     transition: background @toggle_speed ease,
     transform @toggle_speed;
