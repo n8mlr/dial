@@ -39,13 +39,7 @@ class Dial {
 
         c.beginPath();
 
-        // After four items, even menu items will no longer be displayed at
-        // 90 degrees. 
-        // 4, 5
-        console.log("Items", menuItems.length);
-
-        // draw lines first, rotate if needed, then draw menu items...
-
+        // draw lines first, rotate if needed, then draw menu items..
 
         for (var i = 0; i < menuItems.length; i++) {
             item = menuItems[i];
@@ -70,13 +64,12 @@ class Dial {
             // after 4 menu items, even configurations of buttons require rotation by 50% of theta
             if (menuItems.length > 3 && menuItems.length % 2 == 0) {
                 console.log("twist lines");
-
-            } else {
-                c.fillStyle = Colors.SLATE5;
-                c.fillRect(pt.x, pt.y, 2, radius - 1);
-                c.fillStyle = Colors.WHITE;
-                c.fillRect(pt.x - 3, pt.y, 3, radius - 1);
             }
+
+            c.fillStyle = Colors.SLATE5;
+            c.fillRect(pt.x, pt.y, 2, radius - 1);
+            c.fillStyle = Colors.WHITE;
+            c.fillRect(pt.x - 3, pt.y, 3, radius - 1);
 
             // spin the dial one item
             c.translate(radius, radius);

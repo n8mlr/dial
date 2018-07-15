@@ -15,18 +15,11 @@ let settings = {
             ],
         },
         {
-            "name": "TALK",
+            "name": "CREATE",
             "color": Colors.SLATE1,
             "iconName": "icon-discussion",
             "items": [0, 1]
         },
-        {
-            "name": "MEASURE",
-            "color": Colors.YELLOW1,
-            "iconName": "icon-ruler",
-            "items": [0, 1]
-        },
-        {},
         {},
         {},
         {},
