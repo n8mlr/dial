@@ -47,7 +47,7 @@ class Dial {
             // draw text label
             if (item.name) {
                 c.fillStyle = item.color;
-                c.font = "500 24px Museo Sans Rounded";
+                c.font = "500 24px museo-sans-rounded";
                 var tmLabel = c.measureText(item.name);
                 c.fillText(item.name, pt.x - tmLabel.width / 2, opts.txtLabelOffsetRatio * radius);
             }
