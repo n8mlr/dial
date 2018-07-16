@@ -1,6 +1,7 @@
 @arctic: #fafcff;
 @arctic2: #f0f2f5;
 @slate1: #303840;
+@blue1: #029ac0;
 
 @radius: 500px;
 
@@ -19,8 +20,9 @@
 
 .dialBackground {
     .fillOut();
-    background-color: @arctic;
     position: absolute;
+    z-index: 0;
+    background-color: @arctic;
     clip-path: circle(50%);
 }
 
@@ -28,24 +30,35 @@
     .fillOut();
     position: absolute;
     clip-path: polygon(50% 50%, 100% 0, 0 0);
+    color: @blue1;
 }
 
-.pie {
+.hold .symbol {
+	.fillOut();
+	position: absolute;
+	text-align: center;
+	color: @blue1;
+	font-size: 400%;
+	z-index: 1;
+	top: 15%;
+}
+
+.buttonBg {
     .fillOut();
     position: absolute; // occludes hard edges of triangle formed by .hold
     border-radius: 50%;
 }
 
-
-
 .label {
-    position: absolute;
     .fillOut();
+    position: absolute;
+    font-weight: 500;
+    top: 8%;
+    font-size: 100%;
     text-align: center;
+    z-index: 1;
 }
 
-#pieSlice1 .pie {
+#pieSlice1 .buttonBg {
     background-color: @arctic2; //transform: rotate(50deg);
 }
-
-.label {}
