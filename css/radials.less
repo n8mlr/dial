@@ -1,0 +1,51 @@
+@arctic: #fafcff;
+@arctic2: #f0f2f5;
+@slate1: #303840;
+
+@radius: 500px;
+
+.fillOut() {
+    width: @radius;
+    height: @radius;
+}
+
+.container {
+    position: fixed;
+    left: 600px;
+    right: 0;
+    top: 20px;
+    bottom: 0;
+}
+
+.dialBackground {
+    .fillOut();
+    background-color: @arctic;
+    position: absolute;
+    clip-path: circle(50%);
+}
+
+.hold {
+    .fillOut();
+    position: absolute;
+    clip-path: polygon(50% 50%, 100% 0, 0 0);
+}
+
+.pie {
+    .fillOut();
+    position: absolute; // occludes hard edges of triangle formed by .hold
+    border-radius: 50%;
+}
+
+
+
+.label {
+    position: absolute;
+    .fillOut();
+    text-align: center;
+}
+
+#pieSlice1 .pie {
+    background-color: @arctic2; //transform: rotate(50deg);
+}
+
+.label {}
